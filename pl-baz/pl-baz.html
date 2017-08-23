@@ -1,0 +1,36 @@
+<link rel="import" href="../../polymer/polymer-element.html">
+
+<dom-module id="pl-baz">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `pl-baz`
+     * A Pattern Library Component Proof of concept
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PlBaz extends Polymer.Element {
+      static get is() { return 'pl-baz'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'pl-baz'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PlBaz.is, PlBaz);
+  </script>
+</dom-module>
